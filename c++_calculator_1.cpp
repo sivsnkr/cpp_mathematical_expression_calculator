@@ -1,12 +1,7 @@
-#include "pch.h"
-#include "c++_calculator.h"
-#include<iostream>
-#include<corecrt_math.h>
-#include<string.h>
-#include<stack>
+#include<bits/stdc++.h>
 using namespace std;
 
-namespace CCoreapp {
+class mathematical_expression{
     int precedence(char op) {
         if (op == '+' || op == '-')
             return 1;
@@ -23,10 +18,7 @@ namespace CCoreapp {
         case '/': return a / b;
         }
     }
-
-	double Calc::calculate(const char *expression) {
-        cout << "Calculating your value" << endl;
-        string tokens = expression;
+	double calculate(string token) {
         int i;
 
         // stack to store integer values.
